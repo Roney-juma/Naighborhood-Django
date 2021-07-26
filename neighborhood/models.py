@@ -1,3 +1,14 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.utils import timezone
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
-# Create your models here.
+
+
+class Myloc(models.Model):
+    my_area_name = models.CharField(max_length=60, null=True)
+    location = models.CharField(max_length=60)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    my_area_image = models.ImageField(upload_to='images/',default='')
+    description = models.TextField(default='')
