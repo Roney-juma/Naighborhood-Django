@@ -47,3 +47,20 @@ class Profile(models.Model):
 
     def __str__(self):
         return str(self.user)
+
+class Post(models.Model):
+    post = models.CharField(max_length=200,null=True)
+    user = models.ForeignKey(User,on_delete=models.CASCADE,null=True,blank=True)
+    myloc = models.ForeignKey(Myloc,on_delete=models.CASCADE,null=True,blank=True)
+
+
+class Activity(models.Model):
+    activity_name = models.CharField(max_length=60, null=True)
+    description = models.CharField(max_length=200,null=True) 
+    user = models.ForeignKey(User, on_delete=models.CASCADE,null=True,blank=True)
+    myloc = models.ForeignKey(Myloc, on_delete=models.CASCADE)
+    email = models.EmailField()
+    def create_activity(self):
+        self.save()
+    def delete_activity(self):
+        self.delete()
