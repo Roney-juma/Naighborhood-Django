@@ -12,3 +12,16 @@ class Myloc(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     my_area_image = models.ImageField(upload_to='images/',default='')
     description = models.TextField(default='')
+
+    def create_myloc(self):
+        self.save()
+
+    def delete_myloc(self):
+        self.delete()
+
+    @classmethod
+    def search_by_location(cls, search_term):
+        certain_user=cls.objects.filter(location__icontains=search_term)
+        return certain_user
+    def __str__(self):
+        return self.location
