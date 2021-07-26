@@ -20,7 +20,7 @@ from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^',include('my_area.urls')),
+    url(r'^',include('neighborhood.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url("^logout/$", LogoutView.as_view(),{"next_page":"/"}),
 ]
