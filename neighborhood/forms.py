@@ -16,4 +16,7 @@ class NewActivityForm(forms.ModelForm):
     class Meta:
         model = Activity
         fields = ['activity_name','description','email']
-        
+class NewPostForm(forms.ModelForm):
+    class Meta:
+        model=Post
+        fields=['post']        
