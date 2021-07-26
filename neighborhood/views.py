@@ -44,7 +44,7 @@ def addmy_area(request):
         return redirect('home')
     else:
         form = MylocForm()
-    return render(request, 'addmy_area.html', {"form": form}) 
+    return render(request, 'add_area.html', {"form": form}) 
     
 def myloc_details(request,myloc_id):
     activities=Activity.objects.filter(myloc=myloc_id)
