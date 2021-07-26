@@ -25,3 +25,25 @@ class Myloc(models.Model):
         return certain_user
     def __str__(self):
         return self.location
+
+
+class Profile(models.Model):
+    profile_image = models.ImageField(null=True,upload_to='profile_pic/')
+    bio = models.CharField(max_length=200)
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    mylocs = models.ForeignKey(Myloc, on_delete=models.CASCADE, null=True)
+
+
+    @classmethod
+    def get_profile(cls):
+        all_profiles = cls.objects.all()
+        return all_profiles
+
+    def save_profles(self):
+        self.save()
+
+    def delete_profiles(self):
+        self.delete()
+
+    def __str__(self):
+        return str(self.user)
