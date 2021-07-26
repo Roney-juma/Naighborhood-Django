@@ -13,3 +13,6 @@ urlpatterns=[
     url(r'^new_post/(?P<pk>\d+)$', views.new_post,name='new_post'),
     url(r'^search/$', views.search_project, name='search'),
 ]
+
+if settings.DEBUG:
+    urlpatterns+= static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
