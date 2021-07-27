@@ -10,7 +10,7 @@ class NewProfileForm(forms.ModelForm):
 class MylocForm(forms.ModelForm):
     class Meta:
         model = Myloc
-        fields = ['my_area_name','location','my_area_image','description']
+        fields = ['my_area_name','location','my_area_image','description','population','medical_contact','police_contact']
 
 class NewActivityForm(forms.ModelForm):
     class Meta:
