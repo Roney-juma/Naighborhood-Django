@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from cloudinary.models import CloudinaryField
 
 
 
@@ -11,7 +12,7 @@ class Myloc(models.Model):
     location = models.CharField(max_length=60)
     population = models.IntegerField(null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    my_area_image = models.ImageField(upload_to='images/',default='')
+    my_area_image = CloudinaryField('my_area_image')
     description = models.TextField(default='')
     medical_contact = models.IntegerField(null=True)
     police_contact = models.IntegerField(null=True)

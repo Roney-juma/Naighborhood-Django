@@ -15,7 +15,7 @@ import os
 from decouple import config,Csv
 import django_heroku
 import dj_database_url
-
+import cloudinary
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 DEBUG=True
@@ -150,3 +150,9 @@ django_heroku.settings(locals())
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+cloudinary.config( 
+  cloud_name = "roneyjuma", 
+  api_key = "815549592624263", 
+  api_secret = "Frt3q3wztBgp7HDv8Gj4mZtyKFA" 
+)
