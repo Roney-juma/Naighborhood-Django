@@ -2,7 +2,7 @@
 ## Author
 [Roney Juma](https://github.com/Roney-juma)
 *****
-This is a Python Django application that Demonstrates 
+This is a Python Django application that helps people living in the same vicinity as neighbors to know each other and even get access to common Medical and police contact incase of emergency. You can also get to know whats happening within the neighborhood
 *****
 *****
 ### Prerequisites
@@ -18,7 +18,7 @@ To access this project on your local files, you can clone it using these steps
 1. This will clone the repositoty into your local folder
 *****
 ### Live Link
-Or you can access the web application directly via this [LIVE LINK]()
+Or you can access the web application directly via this [LIVE LINK](https://neighborsforroney.herokuapp.com/)
 ******
 ## Dependencies
 * Django Bootstrap
@@ -30,10 +30,19 @@ Or you can access the web application directly via this [LIVE LINK]()
 *****
 ## Technologies Used
 * HTML
-* Python 3
+* Python Django
 * Psycopg2
 * CSS
 * Postgreql Database
+
+### User stories
+* Sign in with the application to start using.
+* Set up a profile about me and a general location and my neighborhood name.
+* Find a list of different businesses in my neighborhood.
+* Find Contact Information for the health department and Police authorities near my neighborhood.
+* Create Posts that will be visible to everyone in my neighborhood.
+* Change My neighborhood when I decide to move out.
+* A user can Only view details of a single neighborhood.
 
 *****
 ### License
