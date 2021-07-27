@@ -24,9 +24,7 @@ Or you can access the web application directly via this [LIVE LINK](https://neig
 * Django Bootstrap
 * Django WTF
 * Admin Login
-* Python Venv
-* Cloudinary
-* Rest Frameworks
+* Python Ven
 *****
 ## Technologies Used
 * HTML
